@@ -4,7 +4,7 @@ import com.luv2code.springDemo.Coach;
 import com.luv2code.springDemo.FortuneService;
 
 public class SwimmingCoach implements Coach {
-	
+
 	private FortuneService fortuneService;
 
 	public SwimmingCoach(FortuneService fortuneService) {

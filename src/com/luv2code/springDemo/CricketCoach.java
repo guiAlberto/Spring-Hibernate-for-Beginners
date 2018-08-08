@@ -3,16 +3,16 @@ package com.luv2code.springDemo;
 public class CricketCoach implements Coach {
 
 	private FortuneService fortuneService;
-	
+
 	// add fields for emailAddress and team
 	private String emailAddress;
 	private String team;
-	
+
 	// create a no-arg constructor
 	public CricketCoach() {
 		System.out.println("CricketCoach: inside no-arg constructor");
 	}
-	
+
 	public String getEmailAddress() {
 		return emailAddress;
 	}
@@ -44,7 +44,6 @@ public class CricketCoach implements Coach {
 	public String getDailyWorkout() {
 		return "Practive fast bownling for 15 minutes";
 	}
-
 
 	@Override
 	public String getDailyFortune() {

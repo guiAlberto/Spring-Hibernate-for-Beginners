@@ -8,10 +8,8 @@ import java.util.Random;
 import com.luv2code.springDemo.FortuneService;
 
 public class RandomFortuneService implements FortuneService {
-	
-	private static final List<String> fortuneList = asList(
-			"Today is your lucky day", 
-			"Yesterday was your lucky day",
+
+	private static final List<String> fortuneList = asList("Today is your lucky day", "Yesterday was your lucky day",
 			"Tomorrow is gonna be your lucky day");
 
 	@Override
