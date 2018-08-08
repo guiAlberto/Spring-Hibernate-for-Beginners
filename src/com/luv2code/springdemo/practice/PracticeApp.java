@@ -11,6 +11,7 @@ public class PracticeApp {
 				"/com/luv2code/springdemo/practice/practiceApplicationContext.xml");
 		Coach coach = context.getBean("scubaDiverCoach", Coach.class);
 		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getDailyFortune());
 		context.close();
 	}
 
