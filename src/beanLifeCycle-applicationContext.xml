@@ -7,20 +7,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="mySwimmingCoachSingleton"
-		class="com.luv2code.springDemo.exercises.SwimmingCoach"
-		scope="singleton">
-		<constructor-arg ref="randomFortuneService"></constructor-arg>
+	<!-- Define your beans here -->
+	<bean id="myCoach" class="com.luv2code.springDemo.TrackCoach"
+		init-method="doMyStartupStuff" destroy-method="doMyCleanUpStuffYoYo">
+
+		<!-- Set up the constructor injection -->
+		<constructor-arg ref="myFortuneService"></constructor-arg>
 	</bean>
 
-	<bean id="mySwimmingCoachPrototype"
-		class="com.luv2code.springDemo.exercises.SwimmingCoach"
-		scope="prototype">
-		<constructor-arg ref="randomFortuneService"></constructor-arg>
-	</bean>
-
-	<bean id="randomFortuneService"
-		class="com.luv2code.springDemo.exercises.RandomFortuneService">
+	<!-- Define the dependency -->
+	<bean id="myFortuneService"
+		class="com.luv2code.springDemo.HappyFortuneService">
 	</bean>
 
 </beans>
